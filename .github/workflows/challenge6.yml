@@ -11,5 +11,5 @@ jobs:
             node-version: '16'
       - run: npm install -g bats
       - run: npm install nodemon prisma --save-dev
-      - run: npm install bcrypt dotenv express imagekit morgan multer ejs express-session
+      - run: npm install bcrypt dotenv express imagekit morgan multer ejs express-session passport passport-local
       - run: bats -v
