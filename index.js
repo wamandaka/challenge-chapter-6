@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const morgan = require("morgan");
-const session = require("cookie-session");
+const session = require("express-session");
 const flash = require("express-flash");
 const router = require("./route/route");
 const port = process.env.PORT || 3000;
@@ -12,10 +12,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(
   session({
-    cookie: {
-      secure: true,
-      maxAge: 60000,
-    },
     // name: "session",
     // keys: ["secret"],
     // maxAge: 24 * 60 * 60 * 1000, // 24 hours
@@ -24,7 +20,6 @@ app.use(
     saveUninitialized: true,
   })
 );
-
 
 const passport = require("./lib/passport");
 app.use(passport.initialize());
