@@ -22,6 +22,5 @@ router.post(
   })
 );
 
-
 router.get("/dashboard", restrict, dashboard);
 module.exports = router;

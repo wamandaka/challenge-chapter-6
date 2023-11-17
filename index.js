@@ -24,14 +24,7 @@ app.use(
     // saveUninitialized: true,
   })
 );
-// Route untuk logout
-app.get('/auth/logout', (req, res) => {
-  // Hapus sesi pengguna
-  req.session = null;
 
-  // Redirect ke halaman utama atau halaman login
-  res.redirect('/auth/login');
-});
 
 const passport = require("./lib/passport");
 app.use(passport.initialize());
