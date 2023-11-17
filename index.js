@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const morgan = require("morgan");
-const session = require("express-session");
+const session = require("cookie-session");
 const flash = require("express-flash");
 const router = require("./route/route");
 const port = process.env.PORT || 3000;
@@ -12,11 +12,26 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(
   session({
-    secret: "secret",
-    resave: false,
-    saveUninitialized: true,
+    // cookie: {
+    //   secure: true,
+    //   maxAge: 60000,
+    // },
+    name: "session",
+    keys: ["secret"],
+    maxAge: 24 * 60 * 60 * 1000, // 24 hours
+    // secret: "secret",
+    // resave: false,
+    // saveUninitialized: true,
   })
 );
+// Route untuk logout
+app.get('/auth/logout', (req, res) => {
+  // Hapus sesi pengguna
+  req.session = null;
+
+  // Redirect ke halaman utama atau halaman login
+  res.redirect('/auth/login');
+});
 
 const passport = require("./lib/passport");
 app.use(passport.initialize());
