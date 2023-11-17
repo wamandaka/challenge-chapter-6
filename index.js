@@ -12,16 +12,16 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(
   session({
-    // cookie: {
-    //   secure: true,
-    //   maxAge: 60000,
-    // },
-    name: "session",
-    keys: ["secret"],
-    maxAge: 24 * 60 * 60 * 1000, // 24 hours
-    // secret: "secret",
-    // resave: false,
-    // saveUninitialized: true,
+    cookie: {
+      secure: true,
+      maxAge: 60000,
+    },
+    // name: "session",
+    // keys: ["secret"],
+    // maxAge: 24 * 60 * 60 * 1000, // 24 hours
+    secret: "secret",
+    resave: false,
+    saveUninitialized: true,
   })
 );
 

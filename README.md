@@ -28,17 +28,17 @@
 ## Deploy in Railway
 
 ### Create account
-- [x] https://challenge6-production-95ae.up.railway.app/api/v1/auth/create
+- [x] https://challenge6-production-95ae.up.railway.app/auth/register
 ### login account
-- [x] https://challenge6-production-95ae.up.railway.app/api/v1/auth/login
+- [x] https://challenge6-production-95ae.up.railway.app/auth/login
 
 ### POST image
-- [x] https://challenge6-production-95ae.up.railway.app/api/v1/galery
+- [x] https://challenge6-production-95ae.up.railway.app/user/galery
 ### GET all images
-- [x] https://challenge6-production-95ae.up.railway.app/api/v1/galery
+- [x] https://challenge6-production-95ae.up.railway.app/user/galery
 ### GET image by id
-- [x] https://challenge6-production-95ae.up.railway.app/api/v1/galery/:id
+- [x] https://challenge6-production-95ae.up.railway.app/user/galery/:id
 ### PUT (update) by id
-- [x] https://challenge6-production-95ae.up.railway.app/api/v1/galery/:id
+- [x] https://challenge6-production-95ae.up.railway.app/user/galery/:id
 ### DELETE by id
-- [x] https://challenge6-production-95ae.up.railway.app/api/v1/galery/:id
+- [x] https://challenge6-production-95ae.up.railway.app/user/galery/:id
