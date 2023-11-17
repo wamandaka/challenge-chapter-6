@@ -25,15 +25,14 @@
 ## Deploy in Railway
 
 ### Create account
-- [x] https://challenge6-production-95ae.up.railway.app/auth/register
+- [x] challenge-chapter-6-production-9d92.up.railway.app/auth/register
 ### login account
-- [x] https://challenge6-production-95ae.up.railway.app/auth/login
-
+- [x] challenge-chapter-6-production-9d92.up.railway.app/auth/login
 ### POST image
-- [x] https://challenge6-production-95ae.up.railway.app/user/gallery
+- [x] challenge-chapter-6-production-9d92.up.railway.app/user/gallery
 ### GET all images
-- [x] https://challenge6-production-95ae.up.railway.app/user/gallery
+- [x] challenge-chapter-6-production-9d92.up.railway.app/user/gallery
 ### PUT (update) by id
-- [x] https://challenge6-production-95ae.up.railway.app/user/gallery/:id
+- [x] challenge-chapter-6-production-9d92.up.railway.app/user/gallery/:id
 ### DELETE by id
-- [x] https://challenge6-production-95ae.up.railway.app/user/gallery/:id
+- [x] challenge-chapter-6-production-9d92.up.railway.app/user/gallery/:id
