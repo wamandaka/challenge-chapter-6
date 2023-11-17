@@ -1,0 +1,54 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// File: schema.prisma
+
+// Definisi tabel User
+model User {
+  id       Int      @id @default(autoincrement())
+  name     String
+  email    String   @unique
+  password String
+  images   Image[]
+}
+
+// Definisi tabel Image
+model Image {
+  id          Int       @id @default(autoincrement())
+  name        String
+  title       String
+  description String
+  url         String
+  created_at  DateTime  @default(now())
+  updated_at  DateTime  @updatedAt
+  deleted_at  DateTime?
+  user_id     Int
+  user        User      @relation(fields: [user_id], references: [id])
+  categories  ImageCategory[] 
+}
+
+// Definisi tabel Category
+model Category {
+  id          Int      @id @default(autoincrement())
+  name        String
+  images      ImageCategory[] 
+}
+
+// Tabel perantara untuk hubungan many-to-many antara Image dan Category
+model ImageCategory {
+  image_id    Int    
+  category_id Int     
+  image       Image   @relation( fields: [image_id], references: [id])
+  category    Category @relation( fields: [category_id], references: [id])
+
+  @@id([image_id, category_id])
+}
