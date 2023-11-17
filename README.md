@@ -33,12 +33,10 @@
 - [x] https://challenge6-production-95ae.up.railway.app/auth/login
 
 ### POST image
-- [x] https://challenge6-production-95ae.up.railway.app/user/galery
+- [x] https://challenge6-production-95ae.up.railway.app/user/gallery
 ### GET all images
-- [x] https://challenge6-production-95ae.up.railway.app/user/galery
-### GET image by id
-- [x] https://challenge6-production-95ae.up.railway.app/user/galery/:id
+- [x] https://challenge6-production-95ae.up.railway.app/user/gallery
 ### PUT (update) by id
-- [x] https://challenge6-production-95ae.up.railway.app/user/galery/:id
+- [x] https://challenge6-production-95ae.up.railway.app/user/gallery/:id
 ### DELETE by id
-- [x] https://challenge6-production-95ae.up.railway.app/user/galery/:id
+- [x] https://challenge6-production-95ae.up.railway.app/user/gallery/:id
